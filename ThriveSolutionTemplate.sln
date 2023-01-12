@@ -2,9 +2,28 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{3C58645C-38BF-4651-9933-7B59BD129B2E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libraries", "libraries", "{02F0E74C-F111-4FC4-B1AC-E1B6AF615F96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CardTransaction", "CardTransaction", "{6B19AC60-79C0-46F0-B513-502AD758F59A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardTransaction.Application", "services\CardTransaction\CardTransaction.Application\CardTransaction.Application.csproj", "{F8BDB0EE-7D5C-4911-BECB-A1F4A18AA1BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{2330AAE4-3F20-4423-AAAE-94A87B4AF59C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6B19AC60-79C0-46F0-B513-502AD758F59A} = {3C58645C-38BF-4651-9933-7B59BD129B2E}
+		{F8BDB0EE-7D5C-4911-BECB-A1F4A18AA1BA} = {6B19AC60-79C0-46F0-B513-502AD758F59A}
+		{2330AAE4-3F20-4423-AAAE-94A87B4AF59C} = {02F0E74C-F111-4FC4-B1AC-E1B6AF615F96}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F8BDB0EE-7D5C-4911-BECB-A1F4A18AA1BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8BDB0EE-7D5C-4911-BECB-A1F4A18AA1BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8BDB0EE-7D5C-4911-BECB-A1F4A18AA1BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8BDB0EE-7D5C-4911-BECB-A1F4A18AA1BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
