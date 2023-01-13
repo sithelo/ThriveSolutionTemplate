@@ -6,9 +6,6 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="Ardalis.GuardClauses" />
-    </ItemGroup>
-    <ItemGroup>
       <ProjectReference Include="$(LibraryRoot)\Core\ThriveShared\ThriveShared.csproj" />
     </ItemGroup>
 </Project>

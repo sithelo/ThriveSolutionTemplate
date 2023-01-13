@@ -14,6 +14,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThriveShared", "libraries\C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardTransaction.Domain", "services\CardTransaction\CardTransaction.Domain\CardTransaction.Domain.csproj", "{EDF0C1E7-DE75-452E-9A63-60E6A995A5D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardTransaction.Api", "services\CardTransaction\CardTransaction.Api\CardTransaction.Api.csproj", "{C17CBE10-E1F8-4AD1-90E1-6152BEE46948}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardTransaction.Infrastructure", "services\CardTransaction\CardTransaction.Infrastructure\CardTransaction.Infrastructure.csproj", "{0C491232-FF4D-4446-B739-1637C4B9F1D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,8 @@ Global
 		{2330AAE4-3F20-4423-AAAE-94A87B4AF59C} = {02F0E74C-F111-4FC4-B1AC-E1B6AF615F96}
 		{D4051597-2B61-4530-BE57-0621485FB9C1} = {2330AAE4-3F20-4423-AAAE-94A87B4AF59C}
 		{EDF0C1E7-DE75-452E-9A63-60E6A995A5D8} = {6B19AC60-79C0-46F0-B513-502AD758F59A}
+		{C17CBE10-E1F8-4AD1-90E1-6152BEE46948} = {6B19AC60-79C0-46F0-B513-502AD758F59A}
+		{0C491232-FF4D-4446-B739-1637C4B9F1D6} = {6B19AC60-79C0-46F0-B513-502AD758F59A}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F8BDB0EE-7D5C-4911-BECB-A1F4A18AA1BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -39,5 +45,13 @@ Global
 		{EDF0C1E7-DE75-452E-9A63-60E6A995A5D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDF0C1E7-DE75-452E-9A63-60E6A995A5D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDF0C1E7-DE75-452E-9A63-60E6A995A5D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C17CBE10-E1F8-4AD1-90E1-6152BEE46948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C17CBE10-E1F8-4AD1-90E1-6152BEE46948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C17CBE10-E1F8-4AD1-90E1-6152BEE46948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C17CBE10-E1F8-4AD1-90E1-6152BEE46948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C491232-FF4D-4446-B739-1637C4B9F1D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C491232-FF4D-4446-B739-1637C4B9F1D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C491232-FF4D-4446-B739-1637C4B9F1D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C491232-FF4D-4446-B739-1637C4B9F1D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
