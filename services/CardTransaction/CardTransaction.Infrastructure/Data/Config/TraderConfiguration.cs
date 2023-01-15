@@ -8,5 +8,15 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 namespace CardTransaction.Infrastructure.Data.Config; 
 
 public class TraderConfiguration : IEntityTypeConfiguration<Trader> {
-    public void Configure(EntityTypeBuilder<Trader> builder) => throw new NotImplementedException();
+    public void Configure(EntityTypeBuilder<Trader> builder) {
+        builder.ToTable("Traders");
+        builder.OwnsOne(t => t.Fee, p =>
+            {
+                p.Property(pp => pp.Currency).HasColumnName("Fee_Currency").HasMaxLength(50);
+                p.Property(pp => pp.Amount).HasColumnName("Fee_Amount").HasMaxLength(50);
+            });
+        builder.Property(t => t.Currency).HasMaxLength(4).IsRequired();
+        builder.Property(t => t.Currency).HasMaxLength(4).IsRequired();
+        
+    }
 }

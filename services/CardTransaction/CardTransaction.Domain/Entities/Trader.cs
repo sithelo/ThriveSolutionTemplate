@@ -42,6 +42,6 @@ public class Trader : EntityBase<Guid>, IAggregateRoot {
         CardBalance   -= transferAmount;
         WalletBalance += transferAmount;
         var traderTransferredEvent = new TraderTransferredEvent(this);
-        base.RegisterDomainEvent(traderTransferredEvent);
+        RegisterDomainEvent(traderTransferredEvent);
     }
 }

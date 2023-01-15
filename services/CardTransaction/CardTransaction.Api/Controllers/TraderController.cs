@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CardTransaction.Api.Controllers; 
 
+[Route("api/[controller]")]
+[ApiController]
 public class TraderController : ControllerBase {
     private readonly IMediator _mediator;
 

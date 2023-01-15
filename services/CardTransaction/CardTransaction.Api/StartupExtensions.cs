@@ -3,8 +3,10 @@
 
 using CardTransaction.Application;
 using CardTransaction.Infrastructure;
+using CardTransaction.Infrastructure.BackgroundJobs;
 using GloboTicket.TicketManagement.Api.Middleware;
 using Microsoft.OpenApi.Models;
+using Quartz;
 
 namespace CardTransaction.Api;
 
@@ -16,9 +18,19 @@ public static class StartupExtensions {
 
         builder.Services.AddApplicationServices();
         builder.Services.AddInfrastructureServices(builder.Configuration);
+        builder.Services.AddQuartz(configure => {
+            var jobKey = new JobKey(nameof(ProcessOutboxMessagesJob));
+            configure.AddJob<ProcessOutboxMessagesJob>(jobKey).AddTrigger(
+                trigger => trigger.ForJob(jobKey)
+                    .WithSimpleSchedule(
+                        schedule => schedule.WithIntervalInSeconds(10)
+                            .RepeatForever()));
+            configure.UseMicrosoftDependencyInjectionJobFactory();
+        });
 
+        builder.Services.AddQuartzHostedService();
         builder.Services.AddHttpContextAccessor();
-
+        builder.Services.AddRouting(options => options.LowercaseUrls = true);
         builder.Services.AddControllers();
         return builder.Build();
     }
