@@ -1,6 +1,7 @@
 ﻿// Copyright (C) Sithelo Ngwenya. All rights reserved
 // Licensed under the Apache License, Version 2.0.
 
+using CardManagement.Domain.Events;
 using ThriveShared;
 using ThriveShared.Interfaces;
 
@@ -16,13 +17,8 @@ public class Trader : EntityBase<Guid>, IAggregateRoot {
     
     
     public void ActivateCard(string cardNumber, string cardExpiry, string cvv) {
-        Guard.Against.Kycd(KYC, nameof(KYC));
-        Guard.Against.NegativeOrZero(topUpAmount, nameof(topUpAmount));
-        Guard.Against.OutOfRange(topUpAmount.Amount, nameof(topUpAmount), topUpAmount.Amount, WalletBalance.Amount);
-
-        CardBalance   += topUpAmount;
-        WalletBalance -= topUpAmount;
-        var traderToppedUpEvent = new TraderToppedUpEvent(this);
-        base.RegisterDomainEvent(traderToppedUpEvent);
+        
+        var activatedCardEvent = new ActivatedCardEvent(this);
+        RegisterDomainEvent(activatedCardEvent);
     }
 }
