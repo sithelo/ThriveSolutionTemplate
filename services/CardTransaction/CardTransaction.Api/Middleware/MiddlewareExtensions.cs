@@ -1,6 +1,4 @@
-﻿using CardTransaction.Api.Middleware;
-
-namespace GloboTicket.TicketManagement.Api.Middleware
+﻿namespace CardTransaction.Api.Middleware
 {
     public static class MiddlewareExtensions
     {

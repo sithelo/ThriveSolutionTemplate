@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardTransaction.Api", "serv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardTransaction.Infrastructure", "services\CardTransaction\CardTransaction.Infrastructure\CardTransaction.Infrastructure.csproj", "{0C491232-FF4D-4446-B739-1637C4B9F1D6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CardManagement", "CardManagement", "{2D605BA1-F77C-4BD5-918A-D1B8548462E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,7 @@ Global
 		{EDF0C1E7-DE75-452E-9A63-60E6A995A5D8} = {6B19AC60-79C0-46F0-B513-502AD758F59A}
 		{C17CBE10-E1F8-4AD1-90E1-6152BEE46948} = {6B19AC60-79C0-46F0-B513-502AD758F59A}
 		{0C491232-FF4D-4446-B739-1637C4B9F1D6} = {6B19AC60-79C0-46F0-B513-502AD758F59A}
+		{2D605BA1-F77C-4BD5-918A-D1B8548462E8} = {3C58645C-38BF-4651-9933-7B59BD129B2E}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F8BDB0EE-7D5C-4911-BECB-A1F4A18AA1BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

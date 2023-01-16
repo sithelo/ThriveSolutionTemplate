@@ -2,6 +2,7 @@
 // Licensed under the Apache License, Version 2.0.
 
 using CardTransaction.Application.Exceptions;
+using CardTransaction.Application.Validations;
 using CardTransaction.Domain.Entities;
 using CardTransaction.Domain.Specification;
 using CardTransaction.Domain.ValueObjects;
@@ -24,6 +25,12 @@ public class UpdateTopUpCardCommandHandler : IRequestHandler<UpdateTopUpCardComm
     }
 
     public async Task<Unit> Handle(UpdateTopUpCardCommand request, CancellationToken cancellationToken) {
+
+        var validator = new UpdateTopUpCardCommandValidator();
+        var validationResult = await validator.ValidateAsync(request);
+
+        if (validationResult.Errors.Count > 0)
+            throw new ValidationException(validationResult);
         var spec = new TraderByIdWithCardSpec(request.Id, request.ThriveId);
         var trader = await _repository.GetByIdAsync(spec, cancellationToken);
         

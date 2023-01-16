@@ -1,10 +1,10 @@
 ﻿// Copyright (C) Sithelo Ngwenya. All rights reserved
 // Licensed under the Apache License, Version 2.0.
 
+using CardTransaction.Api.Middleware;
 using CardTransaction.Application;
 using CardTransaction.Infrastructure;
 using CardTransaction.Infrastructure.BackgroundJobs;
-using GloboTicket.TicketManagement.Api.Middleware;
 using Microsoft.OpenApi.Models;
 using Quartz;
 

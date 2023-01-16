@@ -12,6 +12,12 @@ using ThriveShared.Interfaces;
 namespace CardTransaction.Domain.Entities;
 
 public class Trader : EntityBase<Guid>, IAggregateRoot {
+    public Trader(string thriveId, bool kyc, string currency) {
+        Guard.Against.NullOrEmpty(thriveId, nameof(ThriveId));
+        Guard.Against.Kycd(kyc, nameof(KYC));
+        ThriveId = thriveId;
+        KYC      = kyc;
+    }
     public           string            ThriveId       { get; private set; }
     public           bool              KYC            { get; private set; }
     public           string            Currency       { get; private set; }

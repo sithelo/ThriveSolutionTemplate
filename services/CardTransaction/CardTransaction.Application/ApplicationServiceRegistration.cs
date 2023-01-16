@@ -1,6 +1,8 @@
 ﻿// Copyright (C) Sithelo Ngwenya. All rights reserved
 // Licensed under the Apache License, Version 2.0.
 
+using CardTransaction.Application.Validations;
+using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -11,6 +13,7 @@ public static class ApplicationServiceRegistration {
     {
         services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
+        services.AddValidatorsFromAssemblyContaining<UpdateTopUpCardCommandValidator>();
 
         return services;
     }
