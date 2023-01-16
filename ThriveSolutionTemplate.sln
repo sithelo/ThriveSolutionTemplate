@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardManagement.Infrastructu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThriveAzureServiceBus", "libraries\Core\ThriveAzureServiceBus\ThriveAzureServiceBus.csproj", "{B7A6C74A-2B06-4FC1-9887-A777F34E3A0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThriveHttpCommand", "libraries\Core\ThriveHttpCommand\ThriveHttpCommand.csproj", "{E07195F3-59AA-49C8-AF3F-D3FD3580B589}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,7 @@ Global
 		{B304F46C-2E74-4CC5-8F73-2BB929556C95} = {2D605BA1-F77C-4BD5-918A-D1B8548462E8}
 		{C9782BF1-6002-408C-AAAB-03E343625DA5} = {2D605BA1-F77C-4BD5-918A-D1B8548462E8}
 		{B7A6C74A-2B06-4FC1-9887-A777F34E3A0C} = {2330AAE4-3F20-4423-AAAE-94A87B4AF59C}
+		{E07195F3-59AA-49C8-AF3F-D3FD3580B589} = {2330AAE4-3F20-4423-AAAE-94A87B4AF59C}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F8BDB0EE-7D5C-4911-BECB-A1F4A18AA1BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -91,5 +94,9 @@ Global
 		{B7A6C74A-2B06-4FC1-9887-A777F34E3A0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7A6C74A-2B06-4FC1-9887-A777F34E3A0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7A6C74A-2B06-4FC1-9887-A777F34E3A0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E07195F3-59AA-49C8-AF3F-D3FD3580B589}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E07195F3-59AA-49C8-AF3F-D3FD3580B589}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E07195F3-59AA-49C8-AF3F-D3FD3580B589}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E07195F3-59AA-49C8-AF3F-D3FD3580B589}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

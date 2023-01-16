@@ -32,7 +32,7 @@ public record Money {
         return new Money(one.Amount + another.Amount, one.Currency);
     }
 
-    public static void SameCurrencyError(Money one, Money another) {
+    private static void SameCurrencyError(Money one, Money another) {
         if (!one.IsSameCurrency(another)) throw new Exception("Cannot operate on different currencies");
     }
     public static implicit operator double(Money money) => money.Amount;

@@ -22,6 +22,7 @@
     <PackageVersion Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageVersion Include="Quartz" Version="3.5.0" />
     <PackageVersion Include="Quartz.Extensions.Hosting" Version="3.5.0" />
+    <PackageVersion Include="RestSharp" Version="109.0.0-preview.1" />
     <PackageVersion Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageVersion Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
   </ItemGroup>

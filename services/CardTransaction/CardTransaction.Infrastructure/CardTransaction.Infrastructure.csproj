@@ -19,7 +19,7 @@
     </ItemGroup>
     
     <ItemGroup>
-      <ProjectReference Include="..\..\..\libraries\Core\ThriveAzureServiceBus\ThriveAzureServiceBus.csproj" />
+      <ProjectReference Include="$(LibraryRoot)\Core\ThriveAzureServiceBus\ThriveAzureServiceBus.csproj" />
       <ProjectReference Include="..\CardTransaction.Domain\CardTransaction.Domain.csproj" />
     </ItemGroup>
 

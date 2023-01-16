@@ -4,9 +4,10 @@
 using ThriveShared;
 using ThriveShared.Interfaces;
 
-namespace CardManagement.Infrastructure.Entities;
+namespace CardManagement.Domain.Entities;
 
 public class Trader : EntityBase<Guid>, IAggregateRoot {
+    
     public string ThriveId       { get; private set; }
     public bool   TandC          { get; private set; }
     public string Profile        { get; private set; }

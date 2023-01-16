@@ -6,8 +6,22 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+
     <ItemGroup>
-      <ProjectReference Include="..\..\..\libraries\Core\ThriveShared\ThriveShared.csproj" />
+        <PackageReference Include="Ardalis.Specification.EntityFrameworkCore" />
+        <PackageReference Include="Azure.Messaging.ServiceBus" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Newtonsoft.Json" />
+        <PackageReference Include="Quartz" />
     </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="$(LibraryRoot)\Core\ThriveShared\ThriveShared.csproj"/>
+        <ProjectReference Include="..\CardManagement.Domain\CardManagement.Domain.csproj"/>
+    </ItemGroup>
+
 
 </Project>
