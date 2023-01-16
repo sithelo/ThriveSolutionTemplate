@@ -2,7 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ThriveShared;
+using ThriveAzureServiceBus;
+using ThriveAzureServiceBus.Interfaces;
 using ThriveShared.Interfaces;
 
 namespace CardTransaction.Infrastructure
@@ -18,7 +19,7 @@ namespace CardTransaction.Infrastructure
                );
             services.AddScoped(typeof(IRepository<>), typeof(CardTransactionRepository<>));
             services.AddScoped(typeof(IReadRepository<>), typeof(CardTransactionRepository<>));
-            services.AddScoped<IDomainEventDispatcher, DomainEventDispatcher>();
+            services.AddSingleton<IMessageBusFactory, AzureServiceBusFactory>();
 
             return services;
         }
