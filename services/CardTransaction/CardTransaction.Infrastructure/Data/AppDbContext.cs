@@ -11,12 +11,9 @@ using ThriveShared.Interfaces;
 namespace CardTransaction.Infrastructure.Data;
 
 public class AppDbContext : DbContext {
-    private readonly IDomainEventDispatcher? _dispatcher;
 
-    public AppDbContext(DbContextOptions<AppDbContext> options, IDomainEventDispatcher? dispatcher)
-        : base(options) {
-        _dispatcher = dispatcher;
-    }
+    public AppDbContext(DbContextOptions<AppDbContext> options)
+        : base(options) { }
 
     public DbSet<Trader> Traders { get; set; }
     public DbSet<Card>   Cards   { get; set; }
@@ -26,19 +23,9 @@ public class AppDbContext : DbContext {
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }
 
+
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken()) {
         var result = await base.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
-
-        // ignore events if no dispatcher provided
-        if (_dispatcher == null) return result;
-
-        // dispatch events only if save was successful
-        var entitiesWithEvents = ChangeTracker.Entries<EntityBase<Guid>>()
-            .Select(e => e.Entity)
-            .Where(e => e.DomainEvents.Any())
-            .ToArray();
-
-        await _dispatcher.DispatchAndClearEvents(entitiesWithEvents);
 
         return result;
     }

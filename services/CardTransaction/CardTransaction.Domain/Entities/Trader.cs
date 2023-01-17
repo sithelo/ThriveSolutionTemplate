@@ -28,7 +28,7 @@ public class Trader : EntityBase<Guid>, IAggregateRoot {
     private readonly List<Card>        _cards = new List<Card>();
     public           IEnumerable<Card> Cards => _cards.AsReadOnly();
 
-    
+    private Trader() { } // EF required
     public void TopUpCardBalance(Money topUpAmount) {
         Guard.Against.Kycd(KYC, nameof(KYC));
         Guard.Against.NegativeOrZero(topUpAmount, nameof(topUpAmount));

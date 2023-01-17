@@ -19,6 +19,13 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="Azure.Monitor.OpenTelemetry.Exporter" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="OpenTelemetry" />
+      <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" />
       <PackageReference Include="Quartz.Extensions.Hosting" />
       <PackageReference Include="Swashbuckle.AspNetCore" />
       <PackageReference Include="Swashbuckle.AspNetCore.Swagger" />

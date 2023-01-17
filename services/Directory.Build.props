@@ -6,18 +6,12 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <RepoRoot>$([System.IO.Directory]::GetParent($(MSBuildThisFileDirectory)).Parent.FullName)</RepoRoot>
-        <CoreRoot>$(RepoRoot)\src\Core\src</CoreRoot>
-        <DiagRoot>$(RepoRoot)\src\Diagnostics\src</DiagRoot>
-        <EsdbRoot>$(RepoRoot)\src\EventStore\src</EsdbRoot>
-        <ExtRoot>$(RepoRoot)\src\Extensions\src</ExtRoot>
-        <GatewayRoot>$(RepoRoot)\src\Shovel\src</GatewayRoot>
         <LibraryRoot>..\..\..\libraries</LibraryRoot>
     </PropertyGroup>
 
     <ItemGroup Condition="'$(IsTestProject)' != 'true'">
         <PackageReference Include="MinVer" PrivateAssets="All"/>
         <PackageReference Include="JetBrains.Annotations" PrivateAssets="All"/>
-        <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All"/>
     </ItemGroup>
     
     <PropertyGroup Condition="'$(IsTestProject)' != 'true'">
@@ -26,7 +20,6 @@
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <UpdateVersionProperties>true</UpdateVersionProperties>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
-        <PackageIcon>e-logo.png</PackageIcon>
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
         <RepositoryUrl>https://github.com/sithelo/thrive.git</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
