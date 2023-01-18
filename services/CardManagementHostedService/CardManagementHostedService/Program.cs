@@ -11,7 +11,7 @@ IHost host = Host.CreateDefaultBuilder(args)
         services.AddHostedService<Worker>();
         
     
-        services.AddScoped<DoSomethingJob>();
+       // services.AddScoped<DoSomethingJob>();
 
 
         services.AddSingleton(new JobSchedule(

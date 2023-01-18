@@ -32,7 +32,7 @@ public class UpdateTopUpCardCommandHandler : IRequestHandler<UpdateTopUpCardComm
         if (validationResult.Errors.Count > 0)
             throw new ValidationException(validationResult);
         var spec = new TraderByIdWithCardSpec(request.Id, request.ThriveId);
-        var trader = await _repository.GetByIdAsync(spec, cancellationToken);
+        var trader = await _repository.FirstOrDefaultAsync(spec, cancellationToken);
         
         if (trader == null) throw new NotFoundException(nameof(Trader), request.Id); // middleware handle error to user friend one
         trader.TopUpCardBalance(new Money(request.WalletTransfer, request.Currency));
