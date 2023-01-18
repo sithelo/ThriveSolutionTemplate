@@ -1,11 +1,15 @@
 ﻿// Copyright (C) Sithelo Ngwenya. All rights reserved
 // Licensed under the Apache License, Version 2.0.
 
+using System.Reflection;
+using Azure.Monitor.OpenTelemetry.Exporter;
 using CardTransaction.Api.Middleware;
 using CardTransaction.Application;
 using CardTransaction.Infrastructure;
 using CardTransaction.Infrastructure.BackgroundJobs;
 using Microsoft.OpenApi.Models;
+using OpenTelemetry.Resources;
+using OpenTelemetry.Trace;
 using Quartz;
 
 namespace CardTransaction.Api;
@@ -14,6 +18,22 @@ public static class StartupExtensions {
     public static WebApplication ConfigureServices(
         this WebApplicationBuilder builder
     ) {
+        var serviceName = Assembly.GetExecutingAssembly().GetName().Name;
+        var serviceVersion = Assembly.GetExecutingAssembly().GetName().Version?.ToString();
+        builder.Services.AddOpenTelemetryTracing(providerBuilder =>
+        {
+            providerBuilder
+                .AddConsoleExporter()
+                .AddSource(serviceName)
+                .SetResourceBuilder(
+                    ResourceBuilder.CreateDefault()
+                        .AddService(serviceName: serviceName, serviceVersion: serviceVersion))
+                .AddAspNetCoreInstrumentation()
+                .AddAzureMonitorTraceExporter(o =>
+                {
+                    o.ConnectionString = builder.Configuration.GetSection("AzureMonitorTrace").Value;
+                });
+        });
         AddSwagger(builder.Services);
 
         builder.Services.AddApplicationServices();

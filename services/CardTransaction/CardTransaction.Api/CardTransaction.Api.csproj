@@ -25,6 +25,8 @@
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
       <PackageReference Include="OpenTelemetry" />
+      <PackageReference Include="OpenTelemetry.Exporter.Console" />
+      <PackageReference Include="OpenTelemetry.Extensions.Hosting" />
       <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" />
       <PackageReference Include="Quartz.Extensions.Hosting" />
       <PackageReference Include="Swashbuckle.AspNetCore" />
