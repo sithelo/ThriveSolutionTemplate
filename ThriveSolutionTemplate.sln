@@ -34,6 +34,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThriveHttpCommand", "librar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThriveCardValidator", "libraries\Core\ThriveCardValidator\ThriveCardValidator.csproj", "{D0811CA7-34F7-4128-9659-8813434C8EFB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CardManagementHostedService", "CardManagementHostedService", "{B0F9FD56-9DF8-408C-A207-35BA0CCB78ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardManagementHostedService", "services\CardManagementHostedService\CardManagementHostedService\CardManagementHostedService.csproj", "{2E68EF7C-CE8A-4A7E-B4B5-ACD2BAF354E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +59,8 @@ Global
 		{B7A6C74A-2B06-4FC1-9887-A777F34E3A0C} = {2330AAE4-3F20-4423-AAAE-94A87B4AF59C}
 		{E07195F3-59AA-49C8-AF3F-D3FD3580B589} = {2330AAE4-3F20-4423-AAAE-94A87B4AF59C}
 		{D0811CA7-34F7-4128-9659-8813434C8EFB} = {2330AAE4-3F20-4423-AAAE-94A87B4AF59C}
+		{B0F9FD56-9DF8-408C-A207-35BA0CCB78ED} = {3C58645C-38BF-4651-9933-7B59BD129B2E}
+		{2E68EF7C-CE8A-4A7E-B4B5-ACD2BAF354E5} = {B0F9FD56-9DF8-408C-A207-35BA0CCB78ED}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F8BDB0EE-7D5C-4911-BECB-A1F4A18AA1BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -105,5 +111,9 @@ Global
 		{D0811CA7-34F7-4128-9659-8813434C8EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0811CA7-34F7-4128-9659-8813434C8EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0811CA7-34F7-4128-9659-8813434C8EFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E68EF7C-CE8A-4A7E-B4B5-ACD2BAF354E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E68EF7C-CE8A-4A7E-B4B5-ACD2BAF354E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E68EF7C-CE8A-4A7E-B4B5-ACD2BAF354E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E68EF7C-CE8A-4A7E-B4B5-ACD2BAF354E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
