@@ -1,0 +1,31 @@
+<Project>
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <LangVersion>10</LangVersion>
+        <NoWarn>$(NoWarn);CS1591;CS0618;</NoWarn>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RepoRoot>$([System.IO.Directory]::GetParent($(MSBuildThisFileDirectory)).Parent.FullName)</RepoRoot>
+        <LibraryRoot>..\..\..\libraries</LibraryRoot>
+    </PropertyGroup>
+
+    <ItemGroup Condition="'$(IsTestProject)' != 'true'">
+        <PackageReference Include="MinVer" PrivateAssets="All"/>
+        <PackageReference Include="JetBrains.Annotations" PrivateAssets="All"/>
+    </ItemGroup>
+    
+    <PropertyGroup Condition="'$(IsTestProject)' != 'true'">
+        <IsPackable>true</IsPackable>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <UpdateVersionProperties>true</UpdateVersionProperties>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/sithelo/thrive.git</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <Description>Production-grade Thrive Card library</Description>
+        <Authors>Sithelo Ngwenya</Authors>
+        <Copyright>Thrive</Copyright>
+    </PropertyGroup>
+    
+</Project>

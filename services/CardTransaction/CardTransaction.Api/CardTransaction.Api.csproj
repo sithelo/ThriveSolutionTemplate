@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Content Include="..\..\..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CardTransaction.Application\CardTransaction.Application.csproj" />
+      <ProjectReference Include="..\CardTransaction.Infrastructure\CardTransaction.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Azure.Monitor.OpenTelemetry.Exporter" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="OpenTelemetry" />
+      <PackageReference Include="OpenTelemetry.Exporter.Console" />
+      <PackageReference Include="OpenTelemetry.Extensions.Hosting" />
+      <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" />
+      <PackageReference Include="Quartz.Extensions.Hosting" />
+      <PackageReference Include="Swashbuckle.AspNetCore" />
+      <PackageReference Include="Swashbuckle.AspNetCore.Swagger" />
+    </ItemGroup>
+
+</Project>

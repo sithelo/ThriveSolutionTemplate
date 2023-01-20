@@ -2,9 +2,142 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{3C58645C-38BF-4651-9933-7B59BD129B2E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libraries", "libraries", "{02F0E74C-F111-4FC4-B1AC-E1B6AF615F96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CardTransaction", "CardTransaction", "{6B19AC60-79C0-46F0-B513-502AD758F59A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardTransaction.Application", "services\CardTransaction\CardTransaction.Application\CardTransaction.Application.csproj", "{F8BDB0EE-7D5C-4911-BECB-A1F4A18AA1BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{2330AAE4-3F20-4423-AAAE-94A87B4AF59C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThriveShared", "libraries\Core\ThriveShared\ThriveShared.csproj", "{D4051597-2B61-4530-BE57-0621485FB9C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardTransaction.Domain", "services\CardTransaction\CardTransaction.Domain\CardTransaction.Domain.csproj", "{EDF0C1E7-DE75-452E-9A63-60E6A995A5D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardTransaction.Api", "services\CardTransaction\CardTransaction.Api\CardTransaction.Api.csproj", "{C17CBE10-E1F8-4AD1-90E1-6152BEE46948}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardTransaction.Infrastructure", "services\CardTransaction\CardTransaction.Infrastructure\CardTransaction.Infrastructure.csproj", "{0C491232-FF4D-4446-B739-1637C4B9F1D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CardManagement", "CardManagement", "{2D605BA1-F77C-4BD5-918A-D1B8548462E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardManagement.Api", "services\CardManagement\CardManagement.Api\CardManagement.Api.csproj", "{E9042F0F-5D19-4CFB-BA05-6B175221F351}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardManagement.Domain", "services\CardManagement\CardManagement.Domain\CardManagement.Domain.csproj", "{17FA4B4D-5C10-4E3A-AF12-94B05A8BF5F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardManagement.Application", "services\CardManagement\CardManagement.Application\CardManagement.Application.csproj", "{B304F46C-2E74-4CC5-8F73-2BB929556C95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardManagement.Infrastructure", "services\CardManagement\CardManagement.Infrastructure\CardManagement.Infrastructure.csproj", "{C9782BF1-6002-408C-AAAB-03E343625DA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThriveAzureServiceBus", "libraries\Core\ThriveAzureServiceBus\ThriveAzureServiceBus.csproj", "{B7A6C74A-2B06-4FC1-9887-A777F34E3A0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThriveHttpCommand", "libraries\Core\ThriveHttpCommand\ThriveHttpCommand.csproj", "{E07195F3-59AA-49C8-AF3F-D3FD3580B589}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThriveCardValidator", "libraries\Core\ThriveCardValidator\ThriveCardValidator.csproj", "{D0811CA7-34F7-4128-9659-8813434C8EFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CardManagementHostedService", "CardManagementHostedService", "{B0F9FD56-9DF8-408C-A207-35BA0CCB78ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardManagementHostedService", "services\CardManagementHostedService\CardManagementHostedService\CardManagementHostedService.csproj", "{2E68EF7C-CE8A-4A7E-B4B5-ACD2BAF354E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CardTransactionHostedService", "CardTransactionHostedService", "{34AC1DFD-74B1-431C-A1D2-F74CE1371BD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardTransactionHostedService.Worker", "services\CardTransactionHostedService\CardTransactionHostedService.Worker\CardTransactionHostedService.Worker.csproj", "{96D489BB-272E-4EA5-AD57-F7CCFFFAD748}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardTransactionHostedService.Core", "services\CardTransactionHostedService\CardTransactionHostedService.Core\CardTransactionHostedService.Core.csproj", "{E0912642-F6DF-44EB-9FC9-56FB9B79BFD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardTransactionHostedService.Infrastructure", "services\CardTransactionHostedService\CardTransactionHostedService.Infrastructure\CardTransactionHostedService.Infrastructure.csproj", "{C854C589-F4DA-4C4B-8186-CDAA181B5682}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6B19AC60-79C0-46F0-B513-502AD758F59A} = {3C58645C-38BF-4651-9933-7B59BD129B2E}
+		{F8BDB0EE-7D5C-4911-BECB-A1F4A18AA1BA} = {6B19AC60-79C0-46F0-B513-502AD758F59A}
+		{2330AAE4-3F20-4423-AAAE-94A87B4AF59C} = {02F0E74C-F111-4FC4-B1AC-E1B6AF615F96}
+		{D4051597-2B61-4530-BE57-0621485FB9C1} = {2330AAE4-3F20-4423-AAAE-94A87B4AF59C}
+		{EDF0C1E7-DE75-452E-9A63-60E6A995A5D8} = {6B19AC60-79C0-46F0-B513-502AD758F59A}
+		{C17CBE10-E1F8-4AD1-90E1-6152BEE46948} = {6B19AC60-79C0-46F0-B513-502AD758F59A}
+		{0C491232-FF4D-4446-B739-1637C4B9F1D6} = {6B19AC60-79C0-46F0-B513-502AD758F59A}
+		{2D605BA1-F77C-4BD5-918A-D1B8548462E8} = {3C58645C-38BF-4651-9933-7B59BD129B2E}
+		{E9042F0F-5D19-4CFB-BA05-6B175221F351} = {2D605BA1-F77C-4BD5-918A-D1B8548462E8}
+		{17FA4B4D-5C10-4E3A-AF12-94B05A8BF5F8} = {2D605BA1-F77C-4BD5-918A-D1B8548462E8}
+		{B304F46C-2E74-4CC5-8F73-2BB929556C95} = {2D605BA1-F77C-4BD5-918A-D1B8548462E8}
+		{C9782BF1-6002-408C-AAAB-03E343625DA5} = {2D605BA1-F77C-4BD5-918A-D1B8548462E8}
+		{B7A6C74A-2B06-4FC1-9887-A777F34E3A0C} = {2330AAE4-3F20-4423-AAAE-94A87B4AF59C}
+		{E07195F3-59AA-49C8-AF3F-D3FD3580B589} = {2330AAE4-3F20-4423-AAAE-94A87B4AF59C}
+		{D0811CA7-34F7-4128-9659-8813434C8EFB} = {2330AAE4-3F20-4423-AAAE-94A87B4AF59C}
+		{B0F9FD56-9DF8-408C-A207-35BA0CCB78ED} = {3C58645C-38BF-4651-9933-7B59BD129B2E}
+		{2E68EF7C-CE8A-4A7E-B4B5-ACD2BAF354E5} = {B0F9FD56-9DF8-408C-A207-35BA0CCB78ED}
+		{34AC1DFD-74B1-431C-A1D2-F74CE1371BD2} = {3C58645C-38BF-4651-9933-7B59BD129B2E}
+		{96D489BB-272E-4EA5-AD57-F7CCFFFAD748} = {34AC1DFD-74B1-431C-A1D2-F74CE1371BD2}
+		{E0912642-F6DF-44EB-9FC9-56FB9B79BFD2} = {34AC1DFD-74B1-431C-A1D2-F74CE1371BD2}
+		{C854C589-F4DA-4C4B-8186-CDAA181B5682} = {34AC1DFD-74B1-431C-A1D2-F74CE1371BD2}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F8BDB0EE-7D5C-4911-BECB-A1F4A18AA1BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8BDB0EE-7D5C-4911-BECB-A1F4A18AA1BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8BDB0EE-7D5C-4911-BECB-A1F4A18AA1BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8BDB0EE-7D5C-4911-BECB-A1F4A18AA1BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4051597-2B61-4530-BE57-0621485FB9C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4051597-2B61-4530-BE57-0621485FB9C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4051597-2B61-4530-BE57-0621485FB9C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4051597-2B61-4530-BE57-0621485FB9C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDF0C1E7-DE75-452E-9A63-60E6A995A5D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDF0C1E7-DE75-452E-9A63-60E6A995A5D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDF0C1E7-DE75-452E-9A63-60E6A995A5D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDF0C1E7-DE75-452E-9A63-60E6A995A5D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C17CBE10-E1F8-4AD1-90E1-6152BEE46948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C17CBE10-E1F8-4AD1-90E1-6152BEE46948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C17CBE10-E1F8-4AD1-90E1-6152BEE46948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C17CBE10-E1F8-4AD1-90E1-6152BEE46948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C491232-FF4D-4446-B739-1637C4B9F1D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C491232-FF4D-4446-B739-1637C4B9F1D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C491232-FF4D-4446-B739-1637C4B9F1D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C491232-FF4D-4446-B739-1637C4B9F1D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9042F0F-5D19-4CFB-BA05-6B175221F351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9042F0F-5D19-4CFB-BA05-6B175221F351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9042F0F-5D19-4CFB-BA05-6B175221F351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9042F0F-5D19-4CFB-BA05-6B175221F351}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17FA4B4D-5C10-4E3A-AF12-94B05A8BF5F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17FA4B4D-5C10-4E3A-AF12-94B05A8BF5F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17FA4B4D-5C10-4E3A-AF12-94B05A8BF5F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17FA4B4D-5C10-4E3A-AF12-94B05A8BF5F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B304F46C-2E74-4CC5-8F73-2BB929556C95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B304F46C-2E74-4CC5-8F73-2BB929556C95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B304F46C-2E74-4CC5-8F73-2BB929556C95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B304F46C-2E74-4CC5-8F73-2BB929556C95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9782BF1-6002-408C-AAAB-03E343625DA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9782BF1-6002-408C-AAAB-03E343625DA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9782BF1-6002-408C-AAAB-03E343625DA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9782BF1-6002-408C-AAAB-03E343625DA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7A6C74A-2B06-4FC1-9887-A777F34E3A0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7A6C74A-2B06-4FC1-9887-A777F34E3A0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7A6C74A-2B06-4FC1-9887-A777F34E3A0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7A6C74A-2B06-4FC1-9887-A777F34E3A0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E07195F3-59AA-49C8-AF3F-D3FD3580B589}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E07195F3-59AA-49C8-AF3F-D3FD3580B589}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E07195F3-59AA-49C8-AF3F-D3FD3580B589}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E07195F3-59AA-49C8-AF3F-D3FD3580B589}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0811CA7-34F7-4128-9659-8813434C8EFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0811CA7-34F7-4128-9659-8813434C8EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0811CA7-34F7-4128-9659-8813434C8EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0811CA7-34F7-4128-9659-8813434C8EFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E68EF7C-CE8A-4A7E-B4B5-ACD2BAF354E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E68EF7C-CE8A-4A7E-B4B5-ACD2BAF354E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E68EF7C-CE8A-4A7E-B4B5-ACD2BAF354E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E68EF7C-CE8A-4A7E-B4B5-ACD2BAF354E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96D489BB-272E-4EA5-AD57-F7CCFFFAD748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96D489BB-272E-4EA5-AD57-F7CCFFFAD748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96D489BB-272E-4EA5-AD57-F7CCFFFAD748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96D489BB-272E-4EA5-AD57-F7CCFFFAD748}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0912642-F6DF-44EB-9FC9-56FB9B79BFD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0912642-F6DF-44EB-9FC9-56FB9B79BFD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0912642-F6DF-44EB-9FC9-56FB9B79BFD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0912642-F6DF-44EB-9FC9-56FB9B79BFD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C854C589-F4DA-4C4B-8186-CDAA181B5682}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C854C589-F4DA-4C4B-8186-CDAA181B5682}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C854C589-F4DA-4C4B-8186-CDAA181B5682}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C854C589-F4DA-4C4B-8186-CDAA181B5682}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
