@@ -24,4 +24,13 @@ public class TraderController : ControllerBase {
         await _mediator.Send(updateTopUpCardCommand);
         return NoContent();
     }
+    [HttpPost()]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesDefaultResponseType]
+    public async Task<ActionResult> Create([FromBody] CreateTraderCommand createTraderCommand)
+    { 
+        var response = await _mediator.Send(createTraderCommand);
+        return Ok(response);
+    }
 }

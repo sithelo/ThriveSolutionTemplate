@@ -13,6 +13,7 @@ namespace CardTransaction.Infrastructure
     {
         public static void AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration) {
             var connectionString = configuration.GetConnectionString("CardTransactionConnectionString");
+            services.AddSingleton<ConvertDomainEventsToOutboxMessagesInterceptor>();
             services.AddDbContext<AppDbContext>((sp, options) => {
                     var interceptor = sp.GetService<ConvertDomainEventsToOutboxMessagesInterceptor>();
                    // if (interceptor != null) 

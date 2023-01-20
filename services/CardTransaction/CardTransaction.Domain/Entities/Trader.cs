@@ -12,11 +12,11 @@ using ThriveShared.Interfaces;
 namespace CardTransaction.Domain.Entities;
 
 public class Trader : EntityBase<Guid>, IAggregateRoot {
-    public Trader(string thriveId, bool kyc, string currency) {
-        Guard.Against.NullOrEmpty(thriveId, nameof(ThriveId));
-        Guard.Against.Kycd(kyc, nameof(KYC));
-        ThriveId = thriveId;
-        KYC      = kyc;
+    public Trader(Guid id, string thriveId, bool kyc, string currency) {
+        Id = Guard.Against.Default(id, nameof(id));
+        ThriveId = Guard.Against.NullOrEmpty(thriveId, nameof(ThriveId));
+        KYC = Guard.Against.Kycd(kyc, nameof(KYC));
+        Currency = currency;
     }
     public           string            ThriveId       { get; private set; }
     public           bool              KYC            { get; private set; }
@@ -48,6 +48,14 @@ public class Trader : EntityBase<Guid>, IAggregateRoot {
         CardBalance   -= transferAmount;
         WalletBalance += transferAmount;
         var traderTransferredEvent = new TraderTransferredEvent(this);
+        RegisterDomainEvent(traderTransferredEvent);
+    }
+    public void NewTrader() {
+        WalletBalance  = new Money(10000, "ZAR");
+        Fee            = new Money(100, "ZAR");
+        CardBalance    = new Money(0, "ZAR");
+        AdvanceBalance = new Money(0, "ZAR");
+        var traderTransferredEvent = new TraderCreatedEvent(this);
         RegisterDomainEvent(traderTransferredEvent);
     }
 }
