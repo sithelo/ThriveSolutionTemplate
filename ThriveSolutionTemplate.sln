@@ -46,6 +46,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardTransactionHostedServic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardTransactionHostedService.Infrastructure", "services\CardTransactionHostedService\CardTransactionHostedService.Infrastructure\CardTransactionHostedService.Infrastructure.csproj", "{C854C589-F4DA-4C4B-8186-CDAA181B5682}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Verticalslice-es", "Verticalslice-es", "{94BF5BD0-F454-4303-9C7A-4CF038A5891B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transaction.Domain", "services\Verticalslice-es\Transaction.Domain\Transaction.Domain.csproj", "{54E676D6-977A-4137-964F-DC3C4020FABD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transaction.Api", "services\Verticalslice-es\Transaction.Api\Transaction.Api.csproj", "{F4C24154-2E8C-4F85-8F29-0AA92FB19F06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +79,9 @@ Global
 		{96D489BB-272E-4EA5-AD57-F7CCFFFAD748} = {34AC1DFD-74B1-431C-A1D2-F74CE1371BD2}
 		{E0912642-F6DF-44EB-9FC9-56FB9B79BFD2} = {34AC1DFD-74B1-431C-A1D2-F74CE1371BD2}
 		{C854C589-F4DA-4C4B-8186-CDAA181B5682} = {34AC1DFD-74B1-431C-A1D2-F74CE1371BD2}
+		{94BF5BD0-F454-4303-9C7A-4CF038A5891B} = {3C58645C-38BF-4651-9933-7B59BD129B2E}
+		{54E676D6-977A-4137-964F-DC3C4020FABD} = {94BF5BD0-F454-4303-9C7A-4CF038A5891B}
+		{F4C24154-2E8C-4F85-8F29-0AA92FB19F06} = {94BF5BD0-F454-4303-9C7A-4CF038A5891B}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F8BDB0EE-7D5C-4911-BECB-A1F4A18AA1BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -139,5 +148,13 @@ Global
 		{C854C589-F4DA-4C4B-8186-CDAA181B5682}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C854C589-F4DA-4C4B-8186-CDAA181B5682}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C854C589-F4DA-4C4B-8186-CDAA181B5682}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54E676D6-977A-4137-964F-DC3C4020FABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54E676D6-977A-4137-964F-DC3C4020FABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54E676D6-977A-4137-964F-DC3C4020FABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54E676D6-977A-4137-964F-DC3C4020FABD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4C24154-2E8C-4F85-8F29-0AA92FB19F06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4C24154-2E8C-4F85-8F29-0AA92FB19F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4C24154-2E8C-4F85-8F29-0AA92FB19F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4C24154-2E8C-4F85-8F29-0AA92FB19F06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

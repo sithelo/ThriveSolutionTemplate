@@ -10,6 +10,8 @@
     <PackageVersion Include="Ardalis.Specification" Version="6.1.0" />
     <PackageVersion Include="Ardalis.GuardClauses" Version="4.0.1" />
     <PackageVersion Include="Ardalis.Specification.EntityFrameworkCore" Version="6.1.0" />
+    <PackageVersion Include="Clarity" Version="1.0.2" />
+    <PackageVersion Include="Clarity.AspNetCore.Web" Version="1.0.2" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.13" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.2">
