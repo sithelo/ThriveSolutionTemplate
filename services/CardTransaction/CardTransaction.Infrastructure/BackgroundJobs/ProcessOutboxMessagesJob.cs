@@ -27,12 +27,12 @@ public class ProcessOutboxMessagesJob : IJob {
             .ToListAsync(context.CancellationToken);
 
         foreach (var outboxMessage in messages) {
-            var domainEvent = JsonConvert.DeserializeObject<DomainEventBase>(outboxMessage.Content);
+            var domainEvent = JsonConvert.DeserializeObject(outboxMessage.Content);
             if (domainEvent is null) {
                 continue;
             }
 
-            await _publisher.Publish(domainEvent, context.CancellationToken);
+           // await _publisher.Publish(domainEvent, context.CancellationToken);
             // handle some error
             outboxMessage.ProcessedOn = DateTimeOffset.Now;
         }

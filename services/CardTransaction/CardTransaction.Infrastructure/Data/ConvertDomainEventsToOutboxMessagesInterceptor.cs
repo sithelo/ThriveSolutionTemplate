@@ -35,7 +35,8 @@ public sealed class ConvertDomainEventsToOutboxMessagesInterceptor : SaveChanges
                         domainEvents,
                         new JsonSerializerSettings {
                             TypeNameHandling = TypeNameHandling.All
-                        })
+                        }),
+                    ProcessedOn = null
                 }).ToList();
 
         dbContext.Set<OutboxMessage>().AddRange(outboxMessages);

@@ -21,6 +21,6 @@ public class TraderToppedUpHandler : INotificationHandler<TraderToppedUpEvent> {
             CardBalance = 12345
         };
 
-        await _messagePublisher.Publish(newMessage, nameof(ToppedUpIntegrationEvent), Guid.NewGuid().ToString());
+       // await _messagePublisher.Publish(newMessage, nameof(ToppedUpIntegrationEvent), Guid.NewGuid().ToString());
     }
 }
